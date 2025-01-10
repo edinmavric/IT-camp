@@ -1,0 +1,131 @@
+/* Resetovanje osnovnih stilova kako bi svi pregledači izgledali konzistentno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Koristi se pregledna struktura za telo stranice sa centriranim sadržajem */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* Zaglavlje sa prilagođenom pozadinom i tekstom u centru */
+header {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Navigacija sa fleksibilnim rasporedom i responsivnim prilagođavanjem */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    color: #f4f4f4;
+    padding: 10px;
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background: #007bff;
+    border-radius: 5px;
+}
+
+/* Glavni deo stranice sa fleksibilnim rasporedom i paddingom za čitljivost */
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Kartica za sadržaj sa efektom senke za naglašavanje */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Sekcija sa slikama */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: calc(33.333% - 10px);
+    border-radius: 5px;
+    background-color: rgba(211, 211, 211, 0.5);
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer sekcija */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    nav a {
+        margin: 0;
+    }
+
+    .gallery {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 50%;
+    }
+}
