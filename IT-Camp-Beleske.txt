@@ -230,35 +230,69 @@ npr. broj ili datum
 enctype se koristi za određivanje načina kodiranja podataka prilikom 
 slanja, npr. za datoteke (multipart/form-data)
 
-display: flex; - postavlja kontejner kao fleksibilni kontejner, omogućavajući njegovim potomcima da se poravnaju i rasporede koristeći fleksibilne modele rasporeda
+display: flex; - postavlja kontejner kao fleksibilni kontejner,
+omogućavajući njegovim potomcima da se poravnaju i rasporede koristeći 
+fleksibilne modele rasporeda
 
-flex-direction: row; - određuje glavni smer u kojem se fleksibilni elementi raspoređuju; u ovom slučaju, raspored je horizontalan (sleva nadesno):
+flex-direction: row; - određuje glavni smer u kojem se fleksibilni
+elementi raspoređuju; u ovom slučaju, raspored je horizontalan 
+(sleva nadesno):
+
 row - postavlja elemente u red horizontalno sleva nadesno;
+
 row-reverse - postavlja elemente u red horizontalno sdesna nalevo;
+
 column - postavlja elemente vertikalno od vrha ka dnu;
+
 column-reverse - postavlja elemente vertikalno od dna ka vrhu;
 
-flex-wrap: wrap; - omogućava fleksibilnim elementima da prelome u sledeći red ako nema dovoljno prostora u glavnom smeru:
+flex-wrap: wrap; - omogućava fleksibilnim elementima da prelome u 
+sledeći red ako nema dovoljno prostora u glavnom smeru:
+
 nowrap - zadržava sve elemente u jednom redu bez prelamanja;
-wrap - omogućava prelazak elemenata u novi red kada nema dovoljno prostora;
-wrap-reverse - slično kao wrap, ali elementi prelaze u novi red u obrnutom smeru;
 
-justify-content: center; - poravnava fleksibilne elemente duž glavne ose tako da budu centrirani unutar fleksibilnog kontejnera:
+wrap - omogućava prelazak elemenata u novi red kada nema 
+dovoljno prostora;
+
+wrap-reverse - slično kao wrap, ali elementi prelaze u novi red u 
+obrnutom smeru;
+
+justify-content: center; - poravnava fleksibilne elemente duž 
+glavne ose tako da budu centrirani unutar fleksibilnog kontejnera:
+
 flex-start - poravnava fleksibilne elemente prema početku glavne ose;
+
 flex-end - poravnava fleksibilne elemente prema kraju glavne ose;
+
 center - centrira fleksibilne elemente duž glavne ose;
-space-between - raspoređuje elemente tako da prvi bude poravnat sa početkom, poslednji sa krajem, a preostali prostor ravnomerno podeljen između elemenata;
-space-around - dodaje jednake razmake oko svakog elementa, uključujući i rubne margine;
-space-evenly - deli prostor ravnomerno između svih elemenata, uključujući i rubove kontejnera;
 
-align-items: center; - poravnava fleksibilne elemente duž poprečne ose tako da budu centrirani vertikalno u odnosu na kontejner:
+space-between - raspoređuje elemente tako da prvi bude poravnat sa 
+početkom, poslednji sa krajem, a preostali prostor ravnomerno podeljen 
+između elemenata;
+
+space-around - dodaje jednake razmake oko svakog elementa, uključujući 
+i rubne margine;
+
+space-evenly - deli prostor ravnomerno između svih elemenata, uključujući 
+i rubove kontejnera;
+
+align-items: center; - poravnava fleksibilne elemente duž poprečne 
+ose tako da budu centrirani vertikalno u odnosu na kontejner:
+
 flex-start - poravnava elemente prema početku poprečne ose;
-flex-end - poravnava elemente prema kraju poprečne ose;
-center - centrira elemente duž poprečne ose;
-baseline - poravnava elemente prema njihovim osnovnim linijama teksta;
-stretch - rasteže elemente da popune prostor duž poprečne ose (ako nisu postavljene visine);
 
-flex-flow: column nowrap; - skracenica za kombinaciju flex-direction i flex-wrap, postavlja fleksibilne elemente u vertikalni smer (column) i zabranjuje prelamanje u novi red (nowrap):
+flex-end - poravnava elemente prema kraju poprečne ose;
+
+center - centrira elemente duž poprečne ose;
+
+baseline - poravnava elemente prema njihovim osnovnim linijama teksta;
+
+stretch - rasteže elemente da popune prostor duž poprečne ose 
+(ako nisu postavljene visine);
+
+flex-flow: column nowrap; - skracenica za kombinaciju flex-direction 
+i flex-wrap, postavlja fleksibilne elemente u vertikalni smer (column) 
+i zabranjuje prelamanje u novi red (nowrap):
 
 position: static; - default pozicija svih elemenata ne radi nista i
 ne pise se u CSS-U
@@ -281,3 +315,63 @@ pocinje
 * svi osim static imaju top, right, left i bottom! *
 
 media (...) - za responzivan dizajn
+
+@keyframe animation-name {
+  0% {
+    ...
+  }
+  ...
+  100% {
+    ...
+  }
+}
+
+@keyframes name {}; - Definiše animaciju sa imenom "name" i 
+različitim koracima animacije.
+
+animation-name: name; - Postavlja ime animacije koja će se 
+primeniti na element.
+
+animation-duration: 3s; - Određuje koliko dugo traje animacija 
+(u ovom slučaju 3 sekunde).
+
+animation-timing-function: linear; - Definiše brzinu promene 
+animacije; "linear" znači konstantna brzina.
+
+animation-delay: 0s; - Postavlja vreme čekanja pre početka 
+animacije (u ovom slučaju nema čekanja).
+
+animation-iteration-count: 1; - Određuje koliko puta će se 
+animacija ponoviti (u ovom slučaju jednom).
+
+animation-direction: normal; - Određuje smer animacije; "normal" 
+znači da se animacija izvodi od početka ka kraju.
+
+animation-fill-mode: none; - Definiše kako će se stilovi animacije 
+primenjivati pre ili posle njenog izvršenja. "None" znači da nema 
+efekta van trajanja animacije.
+
+animation-play-state: running; - Kontroliše da li animacija radi 
+ili je pauzirana; "running" znači da animacija teče.
+
+background-image: url('image.jpg'); - Postavlja sliku kao pozadinu 
+elementa; ovde se koristi slika "image.jpg".
+
+background-size: cover; - Određuje veličinu pozadinske slike; 
+"cover" znači da će slika prekriti ceo element bez izobličenja.
+
+background-repeat: no-repeat; - Određuje da se pozadinska 
+slika neće ponavljati.
+
+background-position: center; - Postavlja poziciju pozadinske 
+slike unutar elementa; "center" znači da je slika centrirana.
+
+background-attachment: fixed; - Kontroliše da li je pozadina 
+"fiksirana" (ne pomera se sa stranicom) ili "scroll" 
+(pomiče se sa sadržajem).
+
+background: url('image.jpg') center/cover no-repeat fixed;
+- Skraćeni zapis za pozadinu, kombinuje background-image, 
+background-position, background-size, background-repeat 
+i background-attachment.
+ 
