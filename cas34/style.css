@@ -1,0 +1,22 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.1;
+}
+
+/* background: linear-gradient(rgb(128, 128, 255), rgb(255, 128, 128)); */
