@@ -1,0 +1,208 @@
+:root {
+    --lin-grad-1: #a8edea;
+    --lin-grad-2: #fed6e3;
+}
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('./images/triangles.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.active {
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 24px;
+    box-shadow: 0 0 5px 1px #888;
+    background-color: rgba(128, 128, 128, 0.05);
+}
+
+header img {
+    transition: 300ms;
+}
+
+header img:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: grey;
+    transition: 300ms;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+header .fa-user {
+    color: gray;
+    border: 1px solid gray;
+    padding: 7px 9px;
+    font-size: 22px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5);
+    transition: 300ms;
+}
+
+header .fa-user:hover {
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+main {
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 25px;
+}
+
+main #left {
+    background: linear-gradient(var(--lin-grad-1), var(--lin-grad-2));
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    transition: 300ms;
+}
+
+main #left:hover {
+    scale: 1.1;
+}
+
+main #left h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+main #left h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+main #left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+main #right img {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    height: 500px;
+    transition: 300ms;
+}
+
+main #right img:hover {
+    transform: rotateY(180deg);
+}
+
+footer {
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div a {
+    margin: 0 6px;
+    color: black;
+    text-decoration: none;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+.fa-brands {
+    font-size: 22px;
+    padding: 3px 6px;
+    margin: 0 10px;
+    border: 2px solid gray;
+    color: gray;
+    border-radius: 100%;
+    transition: 300ms;
+}
+
+.fa-brands:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.fa-html5:hover {
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+.fa-css3-alt:hover {
+    color: rgb(0, 110, 255);
+    border: 2px solid rgb(0, 110, 255);
+}
+
+.fa-js:hover {
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.fa-python:hover {
+    color: rgb(128, 128, 255);
+    border: 2px solid rgb(128, 128, 255);
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main #right img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+    }
+}
